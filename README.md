@@ -50,4 +50,4 @@ Admin should be able to create deals with following information:
 * https://github.com/ashutoshpith/FlashSales
 
 ## Time Taken
-* approx 7-8 hr
+* approx 5-6 hr
