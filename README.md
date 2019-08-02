@@ -40,3 +40,10 @@ Admin should be able to create deals with following information:
 * discounted price :float
 * quantity :integer
 * An Image :active storage
+
+
+## github link
+* https://github.com/ashutoshpith/FlashSales
+
+## Time Taken
+* approx 7-8 hr
