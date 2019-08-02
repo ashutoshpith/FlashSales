@@ -24,6 +24,13 @@
 * rails s //for running server
 * now open in browser http://localhost:3000
 
+## for admin section Go to following link 
+* now open in browser http://localhost:3000/admin 
+
+## other link
+* http://localhost:3000/cart
+* http://localhost:3000/deals/new
+* for edit deal you prefer admin section from 1st link
 ## Terms
 
 Admin should be able to create deals with following information:
