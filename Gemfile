@@ -67,3 +67,5 @@ gem 'simple_form'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'whenever', require: false
 gem 'activeadmin', '~> 2.2'
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'jquery-rails'
