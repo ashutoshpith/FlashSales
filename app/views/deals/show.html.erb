@@ -1,29 +1,23 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @deal.title %>
-</p>
+<section class="container">
 
-<p>
-  <strong>Desc:</strong>
-  <%= @deal.desc %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @deal.price %>
-</p>
+<div class="large-3 small-12 column">
+ Discount Offers <%= @deal.discount_price %>
+</div>
 
-<p>
-  <strong>Discount price:</strong>
-  <%= @deal.discount_price %>
-</p>
+<div class="large-9 small-12 column">
+  <h3>
+    <%= @deal.title %>
+    ( <%= time_ago_in_words(@deal.created_at) %>)
+   Available <%= @deal.quantity %>
+  </h3>
+  <p class="label radius mb1">Price Rs <%= @deal.price %></p>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @deal.quantity %>
-</p>
+  <p>  <%= @deal.desc %></p>
 
-<%= link_to 'Edit', edit_deal_path(@deal) %> |
+</div>
+
 <%= link_to 'Back', deals_path %>
+</section>
+
