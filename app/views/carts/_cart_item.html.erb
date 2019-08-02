@@ -1,8 +1,9 @@
-
+<section  class="container shadow-lg p-5">
+<h2 class="text-center ">My Cart</h2>
 <% @order_items.each do |item| %>
 
-    <h3><%= item.deal.title %></h3>
-    <h5><%= item.deal.price %></h5>
+    <h3> <span class="text-info"><%= item.deal.title %></span></h3>
+    <h5>Price <%= item.deal.price %></h5>
 
 
     <%= form_for item, remote: true do |f| %>
@@ -16,11 +17,15 @@
         <%= link_to "Remove Items", order_item_path(item), method: :delete, remote: true, data: { confirm: "Are you sure?" } %>
 
     <% end %>
-    <h2>Subtotal: <%= item.total %></h2>
 
+<hr class="border border-primary">
+    <h5>Subtotal: <%= item.total %></h5>
+<hr class="border border-success">
 <% end %>
 
 
 
-
-<h3>Your current card value has a subtotal of: <%= current_order.subtotal %></h3>
+<h3> Total Rs: <span class="text-danger"> <%= current_order.subtotal %><section></h3>
+<br>
+<%= link_to 'Pay', cart_path, class:"btn btn-block btn-lg btn-dark" %>
+</section>
