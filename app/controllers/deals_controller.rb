@@ -1,5 +1,6 @@
 class DealsController < ApplicationController
   before_action :set_deal, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   respond_to :html, :js
   # GET /deals
   # GET /deals.json
