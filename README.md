@@ -41,6 +41,10 @@ Admin should be able to create deals with following information:
 * quantity :integer
 * An Image :active storage
 
+# wherenever file location for delete deal is lib/tasks/old_delete.rake
+## whenever to shedule delete deal after 24 hours perform below command in cmd line
+* whenever
+* whenever --update-crontab
 
 ## github link
 * https://github.com/ashutoshpith/FlashSales
