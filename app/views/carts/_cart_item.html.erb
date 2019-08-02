@@ -1,15 +1,11 @@
 <section  class="container shadow-lg p-5">
 <h2 class="text-center ">My Cart</h2>
 <% @order_items.each do |item| %>
-
+ 
     <h3> <span class="text-info"><%= item.deal.title %></span></h3>
     <h5>Price <%= item.deal.price %></h5>
 
-
     <%= form_for item, remote: true do |f| %>
-
-
-
         <%= f.hidden_field :deal_id, :value => item.deal.id %>
         <%= f.number_field :quantity, :value => item.quantity.to_i %>
         <%= f.submit "Update Card "%>
@@ -21,11 +17,12 @@
 <hr class="border border-primary">
     <h5>Subtotal: <%= item.total %></h5>
 <hr class="border border-success">
-<% end %>
 
+<% end %>
 
 
 <h3> Total Rs: <span class="text-danger"> <%= current_order.subtotal %><section></h3>
 <br>
 <%= link_to 'Pay', cart_path, class:"btn btn-block btn-lg btn-dark" %>
+
 </section>
