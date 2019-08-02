@@ -28,6 +28,7 @@ class DealsController < ApplicationController
   # POST /deals.json
   def create
     @deal = Deal.new(deal_params)
+    @deal.image.attach(params[:deal][:image])
 
     respond_to do |format|
       if @deal.save
@@ -72,6 +73,6 @@ class DealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deal_params
-      params.require(:deal).permit(:title, :desc, :price, :discount_price, :quantity)
+      params.require(:deal).permit(:title, :desc, :price, :discount_price, :quantity, :image)
     end
 end

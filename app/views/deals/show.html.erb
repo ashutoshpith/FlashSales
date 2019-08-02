@@ -1,5 +1,5 @@
 
-<section class="container">
+<section class="container shadow-lg p-5">
 
 
 <div class="large-3 small-12 column">
@@ -12,9 +12,25 @@
     ( <%= time_ago_in_words(@deal.created_at) %>)
    Available <%= @deal.quantity %>
   </h3>
+  <% if @deal.image.variable? %>
+ 
+  <%= link_to image_tag(@deal.image, width: 170), @deal.image, target: :blank %>
+ 
+  <% elsif @deal.image.image? %>
+  <%= link_to image_tag(@deal.image, width: 170), @deal.image %>
+   
+  <% elsif @deal.image.previewable? %>
+
+  <%= link_to image_tag(@deal.image, width: 170), @deal.image, target: :blank %>
+  
+   <% else %>
+  <%= link_to @deal.image.filename, rails_blob_path(@deal.image,disposition: :attachment) %>
+
+<%end%>
+
   <p class="label radius mb1">Price Rs <%= @deal.price %></p>
 
-  <p>  <%= @deal.desc %></p>
+  <p>Description:   <%= @deal.desc %></p>
 
 </div>
 

@@ -9,10 +9,27 @@
 
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row no-gutters">
-    <div class="col-md-4 p-5">
-      <img src="..." class="card-img" alt="...">
+    <div class="col-md-4 p-5 pr-5">
+     
+
+      <% if deal.image.variable? %>
+     
+      <%= image_tag deal.image, width: 170, height: 170 %>
+  
+      <% elsif deal.image.image? %>
+      <%= image_tag deal.image, width: 170, height: 170 %>
+      
+      <% elsif deal.image.previewable? %>
+
+       <%= image_tag deal.image, width: 170, height: 170 %>
+    
+    <% else %>
+    <%= deal.image.filename %>
+
+  <%end%>
+
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 pl-5">
       <div class="card-body">
         <h5 class="card-title text-info"><%= deal.title %></h5>
         <p class="card-text">

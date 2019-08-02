@@ -69,3 +69,4 @@ gem 'whenever', require: false
 gem 'activeadmin', '~> 2.2'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'jquery-rails'
+gem 'image_processing', '~> 1.2'
