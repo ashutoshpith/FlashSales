@@ -64,7 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # self added
 gem 'simple_form'
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'whenever', require: false
 gem 'activeadmin', '~> 2.2'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
